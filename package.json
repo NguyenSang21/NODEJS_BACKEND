@@ -1,7 +1,7 @@
 {
   "name": "backend_da_v2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Building a Restful CRUD API with Node.js, Express and MongoDB",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/NguyenSang21/BACKEND_DA_V2.git"
   },
-  "author": "",
+  "author": "Nguyen Sang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NguyenSang21/BACKEND_DA_V2/issues"
