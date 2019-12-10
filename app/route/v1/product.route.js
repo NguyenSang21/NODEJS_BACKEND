@@ -7,7 +7,7 @@ const Controller = require(`${global.APP_CONTROLLER_PATH}/product.controller`)
 const controller = new Controller()
 
 // CRUD
-router.get('/', controller.getMany())
+router.get('/', controller.getAll)
 
 // other route
 
