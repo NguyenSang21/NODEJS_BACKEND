@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-  url: 'mongodb://10.11.30.3,10.11.30.4/saleman?replicaSet=fv1',
+  url: "mongodb+srv://democf:anhsang@cluster0-rcuvv.mongodb.net/da_web",
   options: {
     useNewUrlParser: true,
     useCreateIndex: true,
