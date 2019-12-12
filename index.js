@@ -15,19 +15,37 @@ const app = express()
 const http = require('http')
 const https = require('https')
 const mongoose = require('mongoose')
-
+const createError = require('http-errors')
+const morgan = require('morgan')
 const cors = require('cors')
 // import routes path
 const routes = require(global.APP_ROUTE_PATH)
 
 app.use(cors())
+app.use(express.json());
+app.use(morgan('dev'));
+
+// default route
+app.get('/', (req, res) => {
+  res.statusCode = 200 // send the appropriate status code
+  res.json({status: 'success', message: 'WELCOME TO BACKEND'})
+})
+
 // define routes list
 app.use('/api', routes)
 
-// default routes
-app.use('/', (req, res) => {
-  res.statusCode = 200 // send the appropriate status code
-  res.json({status: 'success', message: 'WELCOME TO BACKEND'})
+// error handling
+app.use((req, res, next) => {
+  throw createError(404, 'Resource not found.');
+})
+
+app.use(function (err, req, res, next) {
+  if (typeof err.status === 'undefined' || err.status === 500) {
+    console.error(err.stack);
+    res.status(500).send('View error log on console.');
+  } else {
+    res.status(err.status).send(err);
+  }
 })
 
 const secureServer = https.createServer({}, app)
