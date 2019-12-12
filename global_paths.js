@@ -9,7 +9,7 @@ global.APP_ROOT_PATH = `${__dirname}/app`
 global.APP_COMMON_PATH = `${__dirname}/utils`
 
 // Set global config
-global.APP_ROUTE_PATH = `${global.APP_ROOT_PATH}/route`
+global.APP_ROUTE_PATH = `${global.APP_ROOT_PATH}/routes`
 global.APP_CONTROLLER_PATH = `${global.APP_ROOT_PATH}/controller`
 global.APP_MIDDLEWARE_PATH = `${global.APP_ROOT_PATH}/middleware`
 global.APP_MANAGER_PATH = `${global.APP_ROOT_PATH}/manager`

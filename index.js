@@ -17,14 +17,14 @@ const https = require('https')
 const mongoose = require('mongoose')
 
 const cors = require('cors')
-// import route path
+// import routes path
 const routes = require(global.APP_ROUTE_PATH)
 
 app.use(cors())
 // define routes list
 app.use('/api', routes)
 
-// default route
+// default routes
 app.use('/', (req, res) => {
   res.statusCode = 200 // send the appropriate status code
   res.json({status: 'success', message: 'WELCOME TO BACKEND'})
