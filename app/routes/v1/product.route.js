@@ -5,10 +5,10 @@
 const router = require('express').Router()
 const Controller = require(`${global.APP_CONTROLLER_PATH}/product.controller`)
 const controller = new Controller()
-
+const verifyAccessToken = require('../../middleware')
 // CRUD
-router.get('/', controller.getAll)
+router.get('/', verifyAccessToken, controller.getAll)
 
-// other route
+// other routes
 
 module.exports = router
