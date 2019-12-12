@@ -1,5 +1,5 @@
 const BaseBis = require('./base.bis')
-const ProductModel = require('../model/product.model')
+const ProductModel = require('../models/product.model')
 
 class ProductBis extends BaseBis {
   constructor(mongoose) {
